@@ -1,4 +1,5 @@
--- Función que reciba una lista y devuelva una tupla (min max)
+-- Funcion que devuelva una lista de tuplas que contengan el
+-- máximo y mínimo de una sublista dentro de una lista.
 
 maximo [] = -1
 maximo (a:[]) = a
@@ -23,3 +24,5 @@ minimo(a:b:c)=let smaller(a,b)= if a < b
 tupla [] = (-1, -1)
 tupla (a:[]) = (a,a)
 tupla lista = (maximo lista, minimo lista)
+
+maximin listas = map tupla listas
