@@ -10,3 +10,9 @@ comparamela f i lista = [x | x<-lista, x `f` i]
 coparamesta f (h:t) 
           | f h = h:comparamesta f t 
           | otherwise = comparamesta f t
+
+-- Funcion que encuentra el numero mas grande divisible entre 4929 en una lista de [1,2..100000]
+encuentramela n [] = -1
+encuentramela n lista 
+            | (last  lista) `mod` n == 0 = last lista
+            | otherwise = encuentramela n (init lista)
