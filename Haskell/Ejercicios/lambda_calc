@@ -1,0 +1,22 @@
+-- Ejemplos de cálculo lambda en Haskell
+-- No se que vergas
+-- variable-> constantes predefinidas
+--         |-> literales minusculas
+-- <expresion> ::= <variable>
+                | (<expresion> <expresion>) -> combinacion o aplicación
+                | (lambda<variable>.<expresion>) -> abstracción -> definicion de funciones
+                | <constante>
+                
+  -- a) ((lambdax.(x y))N)
+  --     => (N y)
+  
+  -- b) ((lambday.x)N)
+  --    => x
+  
+  -- c) (lambdax.(lambday.y x)z)v
+  --    => (lambday.y z)v
+  --    => v z
+  
+  -- d) ((lambdax.x x y)(lambdax.x x x y))
+  --    =>(lambdax. x x x y)(lambdax.x x y) y
+  --    => se va al infinito
