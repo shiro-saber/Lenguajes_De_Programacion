@@ -33,6 +33,20 @@ g) (lambdax.lambday.y x) u v
    => (lambday.y u) v
    => v u
 
-h) (lambdax.x(x(y z))x(lambdau.u v)
-   =>
 # E1 E2 E3 = ((E1 E2)E3)
+
+h) (lambdax.x(x(y(z x))))(lambdau.u v)
+   => (lambdau.u v(lambdau.u v(y(z(lambdau.u v)))))
+   => ((lambdau.u v)(y(z(lambdau.u v))))v
+   => y(z(lambdau.u v))v v
+   
+i) (lambdax.lambday.x y y)(lambdaq.q y x) [y->q]
+   => (lambdax.lambdaq.x q q)(lambdaq.q y x)
+   => (lambdaa.(lambdaq.q y x)a a)
+   => (lambdaa.a y x)a
+   => a y x
+
+j) (lambdaxyz.x z(y z))(lambdax.x)(lambdaxy.x)
+   => (lambdayz.(lambdax.x)z(y z))(lambdaxy.x)
+   => (lambdaz.(lambdax.x)z((lambdaxy.x)z))
+   => (lambdaz.z(lambday.z))
