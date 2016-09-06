@@ -18,7 +18,7 @@ c) (lambdax.(lambday.y x)z)v
     => v z
   
 d) ((lambdax.x x y)(lambdax.x x x y))
-    =>(lambdax. x x x y)(lambdax.x x y) y
+    =>(lambdax. x x x y)(lambdax.x x x y) y
     => se va al infinito
 
 e) (lambdax.x y)(lambdau.v u u)
@@ -40,6 +40,7 @@ h) (lambdax.x(x(y(z x))))(lambdau.u v)
    => ((lambdau.u v)(y(z(lambdau.u v))))v
    => y(z(lambdau.u v))v v
    
+   algo alfa
 i) (lambdax.lambday.x y y)(lambdaq.q y x) [y->a]
    => (lambdax.lambdaa.x a a)(lambdaq.q y x)
    => (lambdaa.(lambdaq.q y x)a a)
