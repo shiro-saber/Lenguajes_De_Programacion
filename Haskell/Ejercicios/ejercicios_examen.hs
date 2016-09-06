@@ -14,6 +14,18 @@ divisors :: Integer -> [Integer]
 divisors 1 = [1]
 divisors x = 1:[ y | y <- [2..(x `div` 2)], x `mod` y == 0] ++ [x]
 
+-- Dada una secuencia de números primos, siendo el primer primo el número 2, el segundo primo el 3 y así sucesivamente
+-- ¿cuál es el número primo 10,001 de la secuencia?
+primes :: [Int]
+primes = 2 : 3 : filter (isPrime primes) [5, 7..]
+
+isPrime :: [Int]-> Int-> Bool
+isPrime (p:ps) n
+    | p*p > n = True
+    | otherwise = n `rem` p /= 0 && isPrime ps n
+
+lista = primes
+
 -- Cuántos número primos circulares hay por debajo de 1,000,000
 
 
