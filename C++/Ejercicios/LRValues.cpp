@@ -33,11 +33,13 @@ class Foo
 
 int main()
 {
+  /* L value tiene direccion de memoria, R value no tiene es temporal */
   Foo kuz, kuzemac;
   kuzemac = kuz;
 
-  Foo c = kuzemac;
+  Foo c = kuzemac; // se recibe un L value
   Foo d = kuz.getFoo();
+  Foo e(kuz.getFoo()); // se recibe un R value
 
   return 0;
 }
