@@ -16,9 +16,13 @@ using namespace std;
 // mala práctica de programador for the win
 class Foo
 {
+  private:
+    int modishness;
   public:
-    Foo();
-    ~Foo();
+    Foo(int modishness = 0): modishness(modishness){ cout << "Empalado" << endl; }
+    Foo(const Foo &foo){ cout << "Seiji constructor" << endl; }
+    ~Foo() = default; // para poner el destructor por default
+    Foo getFoo(){ return *this; }
 
     Foo &operator=(const Foo &foo)
     {
@@ -30,8 +34,10 @@ class Foo
 int main()
 {
   Foo kuz, kuzemac;
-
   kuzemac = kuz;
+
+  Foo c = kuzemac;
+  Foo d = kuz.getFoo();
 
   return 0;
 }
