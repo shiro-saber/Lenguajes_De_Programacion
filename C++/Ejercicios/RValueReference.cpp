@@ -20,7 +20,7 @@ class Foo
 
   public:
     int modishness;
-    Foo(int modishness = 0): modishness(modishness){ cout << "Empalado" << endl; }
+    Foo(int modishness = 0): modishness(modishness){ cout << "Empalado default" << endl; }
     Foo(Foo &&foo) { cout << "RValue constructor" << endl; }
     Foo(const Foo &foo){ cout << "Seiji constructor" << endl; }
     ~Foo() = default; // para poner el destructor por default
@@ -56,7 +56,7 @@ int main()
   //cubells = 6; // como ya es LValue ya podemos utilizarlo
   cout << cubells << endl;
 
-  Foo ariel(kuzemac.getFoo()); //esto deberia usar el rvalue contructor, pero aun no
+  Foo ariel(Foo()); //esto deberia usar el rvalue contructor, pero aun no
 
   return 0;
 }
