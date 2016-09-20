@@ -11,16 +11,23 @@
 #include <iostream>
 #include <functional>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 class filter
 {
   public:
+    vector<int> vi {1,2,3,4,5,6,7};
     vector<function<void (int&)>> v;
     int valor = 10;
-    /*void addFilter()
+
+    void imprimemelasiPar()
     {
+      for_each(vi.begin(), vi.end(), [=](int a){ if(a%2 == 0) cout << a << endl; });
+    }
+    
+    /*void addFilter(){
       auto v = this;
       v.push_back([=](int &a)
       {
@@ -28,6 +35,7 @@ class filter
         cout << a << endl;
       });
     }*/
+
     void ex()
     {
       int a = 5;
@@ -42,7 +50,8 @@ int main()
 {
   filter kuz;
   kuz.ex();
-  kuz.addFilter();
+  //kuz.addFilter();
+  kuz.imprimemelasiPar();
 
   return 0;
 }
