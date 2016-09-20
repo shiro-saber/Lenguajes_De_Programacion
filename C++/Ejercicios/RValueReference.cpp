@@ -3,7 +3,7 @@
 * @Date:   13-Sep-2016
 * @Email:  shiro.archerl@gmail.com
 * @Last modified by:   shiro-saber
-* @Last modified time: 13-Sep-2016
+* @Last modified time: 14-Sep-2016
 * @License: Belongs to Juan Carlos León Jarquín
 */
 
@@ -57,6 +57,7 @@ int main()
   cout << cubells << endl;
 
   Foo ariel(Foo()); //esto deberia usar el rvalue contructor, pero aun no
+  //cout << ariel << endl;
 
   return 0;
 }
