@@ -26,7 +26,13 @@ class filter
     {
       for_each(vi.begin(), vi.end(), [=](int a){ if(a%2 == 0) cout << a << endl; });
     }
-    
+
+    template <class function>
+    void printIf(function f)
+    {
+      for_each(vi.begin(), vi.end(), f);
+    }
+
     /*void addFilter(){
       auto v = this;
       v.push_back([=](int &a)
