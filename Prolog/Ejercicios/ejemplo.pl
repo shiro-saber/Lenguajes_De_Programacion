@@ -1,3 +1,4 @@
+%Variables siempre empiezan con mayúscula
 % quesque ariel dice que vienen en la biblia
 % base de conocimientos
 father(terach, nachor).
